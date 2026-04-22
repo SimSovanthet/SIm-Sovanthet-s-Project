@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fynn Kpop Merchandise</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-grey: #6c757d;
+        --light-bg: #f4f4f4;
+        --dark-accent: #222;
+      }
+      body {
+        background-color: var(--light-bg);
+        color: var(--dark-accent);
+      }
+      .navbar {
+        background-color: white;
+        border-bottom: 2px solid var(--primary-grey);
+      }
+      .product-card {
+        background-color: white;
+        border: 1px solid #ddd;
+        transition: transform 0.3s;
+        margin-bottom: 30px;
+        height: 100%;
+      }
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .btn-cart {
+        background-color: var(--primary-grey);
+        color: white;
+        border: none;
+      }
+      .btn-cart:hover {
+        background-color: #495057;
+        color: white;
+      }
+      .price-tag {
+        color: var(--primary-grey);
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      .card-img-top {
+        height: 250px;
+        object-fit: cover;
+      }
+      .form-select-sm {
+        font-size: 0.8rem;
+        border-color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><b>Fynn</b> Kpop Merchandise</a>
+        <div class="d-flex">
+          <a href="#" id="view-cart" class="nav-link position-relative">
+            Cart (<span>0</span>)
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="text-center mb-5">
+        <h2 class="display-6 fw-bold">Featured Products</h2>
+        <p class="text-muted">Premium ENHYPEN Collection</p>
+      </div>
+
+      <div
+        id="liveAlertPlaceholder"
+        class="text-center"
+        style="height: 50px; font-weight: bold"
+      ></div>
+
+      <div class="row">
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card product-card">
+            <div class="card-body text-center d-flex flex-column">
+              <img
+                src="image/enhypenlightstick.jfif"
+                class="card-img-top"
+                alt="Lightstick"
+              />
+              <h5 class="card-title mt-3">ENHYPEN Lightstick</h5>
+              <p class="price-tag">$60.00</p>
+              <div class="mt-auto d-grid gap-2">
+                <button
+                  class="btn btn-outline-dark btn-sm btn-details"
+                  data-desc="Official ENGENE Lightstick. Features multiple color modes and Bluetooth concert syncing."
+                >
+                  View Details
+                </button>
+                <button class="btn btn-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card product-card">
+            <div class="card-body text-center d-flex flex-column">
+              <img
+                src="image/Kpop Enhypen Merch En World Tour Hoodie Long Sleeve Streetwear Women Men Hooded Sweatshirt Hip Hop Clothes at Amazon Men’s Clothing store.jfif"
+                class="card-img-top"
+                alt="FATE Hoodie"
+              />
+              <h5 class="card-title mt-3">ENHYPEN FATE HOODIE</h5>
+              <p class="price-tag">$35.00</p>
+              <div class="mb-3 text-start">
+                <label class="small fw-bold text-muted">Select Size:</label>
+                <select class="form-select form-select-sm product-size">
+                  <option value="S">Small (S)</option>
+                  <option value="M" selected>Medium (M)</option>
+                  <option value="L">Large (L)</option>
+                  <option value="XL">Extra Large (XL)</option>
+                </select>
+              </div>
+              <div class="mt-auto d-grid gap-2">
+                <button
+                  class="btn btn-outline-dark btn-sm btn-details"
+                  data-desc="Premium cotton blend tour hoodie. Includes embroidered logo and tour dates on the back."
+                >
+                  View Details
+                </button>
+                <button class="btn btn-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card product-card">
+            <div class="card-body text-center d-flex flex-column">
+              <img
+                src="image/Sunghoon Keyrings.jfif"
+                class="card-img-top"
+                alt="Keychains"
+              />
+              <h5 class="card-title mt-3">ENHYPEN KEYCHAINS</h5>
+              <p class="price-tag">$4.00/each</p>
+              <div class="mt-auto d-grid gap-2">
+                <button
+                  class="btn btn-outline-dark btn-sm btn-details"
+                  data-desc="Durable acrylic keychains featuring members. Perfect for your bag or keys."
+                >
+                  View Details
+                </button>
+                <button class="btn btn-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card product-card">
+            <div class="card-body text-center d-flex flex-column">
+              <img
+                src="image/Big hit Entertainment ENHYPEN - BORDER _ DAY ONE (1st Mini Album) Album+Folded Poster (DAWN ver_).jfif"
+                class="card-img-top"
+                alt="Border Day One"
+              />
+              <h5 class="card-title mt-3">BORDER DAY ONE ALBUM</h5>
+              <p class="price-tag">$25.00</p>
+              <div class="mt-auto d-grid gap-2">
+                <button
+                  class="btn btn-outline-dark btn-sm btn-details"
+                  data-desc="The debut mini album that started it all. Includes photobook, photocards, and folded poster."
+                >
+                  View Details
+                </button>
+                <button class="btn btn-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card product-card">
+            <div class="card-body text-center d-flex flex-column">
+              <img
+                src="image/Oppa Store ENHYPEN Romance _ Untold 2nd Album, WEVERSE ver.jfif"
+                class="card-img-top"
+                alt="Romance Untold"
+              />
+              <h5 class="card-title mt-3">ROMANCE UNTOLD SET</h5>
+              <p class="price-tag">$55.00</p>
+              <div class="mt-auto d-grid gap-2">
+                <button
+                  class="btn btn-outline-dark btn-sm btn-details"
+                  data-desc="Complete set of the Romance: Untold album. High quality packaging with exclusive Weverse benefits."
+                >
+                  View Details
+                </button>
+                <button class="btn btn-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card product-card">
+            <div class="card-body text-center d-flex flex-column">
+              <img
+                src="image/ENHYPEN 1ST STUDIO ALBUM - DIMENSION _ DILEMMA.jfif"
+                class="card-img-top"
+                alt="Dimension Dilemma"
+              />
+              <h5 class="card-title mt-3">DIMENSION DILEMMA</h5>
+              <p class="price-tag">$22.00</p>
+              <div class="mt-auto d-grid gap-2">
+                <button
+                  class="btn btn-outline-dark btn-sm btn-details"
+                  data-desc="First studio album featuring hit tracks. Essential for every ENGENE collection."
+                >
+                  View Details
+                </button>
+                <button class="btn btn-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Your Cart</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="cart-items-list" class="mb-3">
+              <p class="text-muted text-center">Your cart is empty.</p>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between">
+              <h5>Total:</h5>
+              <h5 id="cart-total">$0.00</h5>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="processPayment()"
+              style="background-color: #6c757d; border: none"
+            >
+              Proceed to Payment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="details-title">Product Details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <img
+              src=""
+              id="details-img"
+              class="img-fluid rounded mb-3"
+              style="max-height: 350px"
+            />
+            <h3 id="details-name"></h3>
+            <p id="details-price" class="price-tag"></p>
+            <p id="details-desc" class="mt-3 text-muted px-4"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let cart = [];
+      const cartDisplay = document.querySelector(".nav-link span");
+      const myCartModal = new bootstrap.Modal(
+        document.getElementById("cartModal"),
+      );
+      const detailsModal = new bootstrap.Modal(
+        document.getElementById("detailsModal"),
+      );
+      document.querySelectorAll(".btn-cart").forEach((button) => {
+        button.addEventListener("click", () => {
+          const card = button.closest(".card-body");
+          const name = card.querySelector(".card-title").innerText;
+          const price = parseFloat(
+            card.querySelector(".price-tag").innerText.replace("$", ""),
+          );
+
+          const sizeDropdown = card.querySelector(".product-size");
+          const selectedSize = sizeDropdown ? sizeDropdown.value : null;
+          const displayName = selectedSize ? `${name} (${selectedSize})` : name;
+
+          cart.push({ name: displayName, price: price });
+          cartDisplay.innerText = cart.length;
+
+          const placeholder = document.getElementById("liveAlertPlaceholder");
+          placeholder.innerHTML = `<div class="text-secondary">Added ${displayName} to your collection!</div>`;
+          setTimeout(() => {
+            placeholder.innerHTML = "";
+          }, 2000);
+        });
+      });
+
+      document.querySelectorAll(".btn-details").forEach((button) => {
+        button.addEventListener("click", () => {
+          const card = button.closest(".card-body");
+          document.getElementById("details-name").innerText =
+            card.querySelector(".card-title").innerText;
+          document.getElementById("details-img").src =
+            card.querySelector("img").src;
+          document.getElementById("details-price").innerText =
+            card.querySelector(".price-tag").innerText;
+          document.getElementById("details-desc").innerText =
+            button.getAttribute("data-desc");
+          detailsModal.show();
+        });
+      });
+
+      document.getElementById("view-cart").addEventListener("click", (e) => {
+        e.preventDefault();
+        const list = document.getElementById("cart-items-list");
+        const totalDisp = document.getElementById("cart-total");
+        list.innerHTML = "";
+        let total = 0;
+        if (cart.length === 0) {
+          list.innerHTML = '<p class="text-center text-muted">Empty</p>';
+        } else {
+          cart.forEach((item) => {
+            list.innerHTML += `<div class="d-flex justify-content-between mb-2"><span>${item.name}</span><span>$${item.price.toFixed(2)}</span></div>`;
+            total += item.price;
+          });
+        }
+        totalDisp.innerText = `$${total.toFixed(2)}`;
+        myCartModal.show();
+      });
+
+      function processPayment() {
+        if (cart.length > 0) {
+          const total = document.getElementById("cart-total").innerText;
+          document.getElementById("cart-items-list").innerHTML =
+            `<div class="alert alert-dark text-center">Redirecting to ABA/Wing... <br> Total: ${total}</div>`;
+        } else {
+          alert("Cart is empty!");
+        }
+      }
+    </script>
+  </body>
+</html>
